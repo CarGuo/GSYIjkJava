@@ -5,3 +5,5 @@
 ```
 implementation "com.github.CarGuo:GSYIjkJava:1.0.0"
 ```
+
+### 更多请见 https://github.com/CarGuo/GSYVideoPlayer
