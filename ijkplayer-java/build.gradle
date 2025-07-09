@@ -50,6 +50,30 @@ afterEvaluate {
                 groupId = 'com.github.CarGuo'
                 artifactId = 'GSYIjkJava'
                 version = '1.0.0'
+
+
+                pom {
+                    name = PROJ_NAME
+                    description = PROJ_DESCRIPTION
+                    url = PROJ_VCSURL
+                    licenses {
+                        license {
+                            name = "The Apache License, Version 2.0"
+                            url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = DEVELOPER_ID
+                            name = DEVELOPER_NAME
+                        }
+                    }
+                    scm {
+                        connection = PROJ_ISSUETRACKERURL
+                        developerConnection = PROJ_VCSURL
+                        url = PROJ_WEBSITEURL
+                    }
+                }
             }
         }
     }
@@ -59,7 +83,7 @@ afterEvaluate {
 publishing {
     repositories {
         maven {
-            name = "ijkplayer-java"
+            name = "GSYIjkJava"
             url = "https://maven.pkg.github.com/CarGuo/GSYVideoPlayer"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
