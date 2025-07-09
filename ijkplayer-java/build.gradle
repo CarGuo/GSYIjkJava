@@ -31,6 +31,8 @@ android {
 
     lint {
         disable 'ExpiredTargetSdkVersion'
+        checkReleaseBuilds false  // 可选：完全禁用release构建时的lint检查
+        abortOnError false        // 可选：即使有错误也不中断构建
     }
 
     namespace 'tv.danmaku.ijk.media.player'

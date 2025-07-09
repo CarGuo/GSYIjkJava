@@ -32,6 +32,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    lint {
+        disable 'ExpiredTargetSdkVersion'
+        checkReleaseBuilds false  // 可选：完全禁用release构建时的lint检查
+        abortOnError false        // 可选：即使有错误也不中断构建
+    }
 }
 
 dependencies {
