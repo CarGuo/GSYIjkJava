@@ -21,6 +21,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     namespace 'tv.danmaku.ijk.media.player'
 }
 
@@ -37,15 +49,6 @@ afterEvaluate {
                 artifactId = 'GSYIjkJava'
                 version = '1.0.0'
             }
-        }
-    }
-}
-
-android {
-    publishing {
-        singleVariant('release') {
-            withSourcesJar()
-            withJavadocJar()
         }
     }
 }
