@@ -34,7 +34,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.CarGuo'
-                artifactId = 'ijkplayer-java'
+                artifactId = 'GSYIjkJava'
                 version = '1.0.0'
             }
         }
