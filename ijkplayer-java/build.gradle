@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
     // http://tools.android.com/tech-docs/new-build-system/tips
@@ -26,5 +27,44 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.CarGuo'
+                artifactId = 'ijkplayer-java'
+                version = '1.0.0'
+            }
+        }
+    }
+}
+
+android {
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+
+publishing {
+    repositories {
+        maven {
+            name = "ijkplayer-java"
+            url = "https://maven.pkg.github.com/CarGuo/GSYVideoPlayer"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+
+
 
 //apply from: new File(rootProject.projectDir, "tools/gradle-on-demand.gradle");
