@@ -84,7 +84,7 @@ publishing {
     repositories {
         maven {
             name = "GSYIjkJava"
-            url = "https://maven.pkg.github.com/CarGuo/GSYVideoPlayer"
+            url = "https://maven.pkg.github.com/CarGuo/GSYIjkJava"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
