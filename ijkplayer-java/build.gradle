@@ -30,7 +30,7 @@ android {
     }
 
     lint {
-        baseline = file("lint-baseline.xml")
+        disable 'ExpiredTargetSdkVersion'
     }
 
     namespace 'tv.danmaku.ijk.media.player'
