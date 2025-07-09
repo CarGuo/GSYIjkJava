@@ -47,9 +47,9 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.CarGuo'
-                artifactId = 'GSYIjkJava'
-                version = '1.0.0'
+                group = PROJ_GROUP
+                artifactId = PROJ_ARTIFACTID
+                version = PROJ_VERSION
 
 
                 pom {
