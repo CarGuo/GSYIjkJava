@@ -2,9 +2,31 @@
 
 ### 用于迁移 ijkplayer-java
 
+
+
 ```
-implementation "com.github.CarGuo:GSYIjkJava:1.0.0"
+allprojects {
+    repositories {
+        ///...
+        mavenCentral()
+    }
+}
+
+implementation "io.github.carguo:gsyijkjava:1.0.0"
+
 ```
+
+```
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+implementation "com.github.CarGuo:GSYIjkJava:v1.0.0"
+```
+
 
 ### 更多请见 https://github.com/CarGuo/GSYVideoPlayer
 
